@@ -1,0 +1,148 @@
+/* Body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.graphicmama.com/blog/wp-content/uploads/2021/04/22092955/free-medical-background-42.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    margin: 50px auto;  
+    width: 50%;
+    padding: 40px;
+    background: black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+h1, p {
+    margin: 20px 0;
+}
+
+/* Fade in animation for headings */
+.fade-in {
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Resized image styling */
+.fade-in-img {
+    max-width: 300px; /* Limit width to 300px */
+    height: auto;    /* Maintain aspect ratio */
+    margin: 20px 0; /* Add some spacing */
+    animation: fadeInImage 1.5s ease-in-out;
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Styling for buttons with hover effect */
+.nav-button, .submit-button, .back-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover, .submit-button:hover, .back-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.nav-button {
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+/* Navbar styling for button */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Styling for links */
+a.nav-link, a.back-button {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 18px;
+}
+
+a.nav-link:hover, a.back-button:hover {
+    text-decoration: underline;
+}
+
+/* Button for submitting form */
+button.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Form styling */
+form input[type="file"] {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form .form-animation {
+    animation: fadeInUp 1.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+    .fade-in-img {
+        max-width: 200px; /* Reduce image size further on small screens */
+    }
+}
